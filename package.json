@@ -1,0 +1,26 @@
+{
+  "name": "Burgers",
+  "version": "1.0.0",
+  "description": "Express/MySQL/Handel-bars",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobdeleon12/Burgers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobdeleon12/Burgers/issues"
+  },
+  "homepage": "https://github.com/jacobdeleon12/Burgers#readme",
+  "dependencies": {
+    "express": "^4.17.0",
+    "handlebars": "^4.1.2",
+    "mysql": "^2.17.1"
+  }
+}
