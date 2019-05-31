@@ -24,11 +24,14 @@ $(function() {
   $(".create-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
-
+    
     var newburger = {
-      name: $("#burger").val().trim(),
+      name: $("#burger").val().trim()
     };
-
+    if (newburger === "") {
+      alert("please enter a name")
+    }else{
+ 
     // Send the POST request.
     $.ajax("/api/burgers", {
       type: "POST",
@@ -40,6 +43,33 @@ $(function() {
         location.reload();
       }
     );
+    }
+  });
+
+  $(".pre-sel").on("submit", function(event) {
+    // Make sure to preventDefault on a submit event.
+    event.preventDefault();
+    var newburger = {
+      name: $('input[name = burger]:checked', '#burger-form').val()
+    };
+    console.log(newburger);
+    
+    if (newburger === null) {
+      alert("please slect a burger")
+    }else{
+  
+    // Send the POST request.
+    $.ajax("/api/burgers", {
+      type: "POST",
+      data: newburger
+    }).then(
+      function() {
+        console.log("created new burger");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+    }
   });
 
   $(".delete-burger").on("click", function(event) {
