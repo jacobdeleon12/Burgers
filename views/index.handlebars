@@ -1,51 +1,104 @@
-<div class="container col-6">
+<div class="container col-2">
   <h1>burgers!</h1>
 </div>
+<br>
+<img id="bobs-img" src="" alt="">
 
-<div class="container col-6">
-  <h2>burgers that have not been devoured!</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <h2>Burgers you have not devoured!</h2>
+      <div>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burgers-block devoured=true}}
+        {{/unless}}
+        {{/each}}
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <h2>burgers you have been devoured!</h2>
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burgers-block devoured=false}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
 </div>
 
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  {{> burgers/burgers-block devoured=true}}
-  {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>burgers that have been devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  {{> burgers/burgers-block devoured=false}}
-  {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add your own Burger!</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="burger">Burger Name:</label>
-    <input type="text" id="burger" name="name">
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <h5 class="card-header">Add your own Burger!</h5>
+          <div class="card-body">
+            <form class="create-form">
+              <div class="form-group">
+                <label for="burger">Burger Name:</label>
+                <input type="text" id="burger" name="name">
+              </div>
+            <button class="btn btn-primary" type="submit">Add burger</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-  </div>
-  <button type="submit">Add burger</button>
-</form>
+</div>
 
-<h2>Add your Favorite Bobs Burgers Burger!</h2>
+<br>
+<br>
 
-<form class="pre-sel" id="burger-form">
-  {{!-- button for pretyped out burgers --}}
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="burger" id="burger1" value="burger1" checked>
-    <label class="form-check-label" for="inlineRadio1">burger1</label>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <h5 class="card-header">Add your own Burger!</h5>
+          <div class="card-body">
+            <form class="pre-sel" id="burger-form">
+              {{!-- button for pretyped out burgers --}}
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="burger" id="burger1" value="I've Created a Muenster Burger"
+                  checked>
+                <label class="form-check-label" for="inlineRadio1">I've Created a Muenster Burger</label>
+              </div>
+              <br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="burger" id="burger2" value="'New Bacon-ings' (comes with bacon)">
+                <label class="form-check-label" for="inlineRadio2">"New Bacon-ings" (comes with bacon)</label>
+              </div>
+              <br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="burger" id="burger2" value="Poblano Picasso Burger">
+                <label class="form-check-label" for="inlineRadio2">Poblano Picasso Burger</label>
+              </div>
+              <br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="burger" id="burger2" value="Jingle Bell Pepper Burger">
+                <label class="form-check-label" for="inlineRadio2">Jingle Bell Pepper Burger</label>
+              </div>
+              <br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="burger" id="burger2" value="Mesclun Around Burger">
+                <label class="form-check-label" for="inlineRadio2">Mesclun Around Burger</label>
+              </div>
+              <br>
+              <button class="btn btn-primary" id="add-burger" type="submit">Add burger</button>
+            </form>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="burger" id="burger2" value="burger2">
-    <label class="form-check-label" for="inlineRadio2">burger2</label>
-  </div>
-  <button id="add-burger" type="submit">Add burger</button>
-</form>
+</div>
+
+<br>
+<br>
+<br>
+
+
+
+

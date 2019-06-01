@@ -28,7 +28,7 @@ $(function() {
     var newburger = {
       name: $("#burger").val().trim()
     };
-    if (newburger === "") {
+    if (newburger.name === "") {
       alert("please enter a name")
     }else{
  
@@ -54,7 +54,7 @@ $(function() {
     };
     console.log(newburger);
     
-    if (newburger === null) {
+    if (newburger.name === "") {
       alert("please slect a burger")
     }else{
   
