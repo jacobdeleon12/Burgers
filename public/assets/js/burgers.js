@@ -21,6 +21,7 @@ $(function() {
     );
   });
 
+
   $(".create-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
@@ -28,7 +29,9 @@ $(function() {
     var newburger = {
       name: $("#burger").val().trim()
     };
-    if (newburger.name === "") {
+    console.log(newburger);
+    
+    if (newburger === '') {
       alert("please enter a name")
     }else{
  
