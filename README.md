@@ -26,7 +26,5 @@ npm i mysql
 npm install
 ```
 
-## Running the tests
 
-How to run the program. Liri has a few commands that it knows. "concert-this"(artist)"spotify-this-song"(song name)"movie-this"(movie name)"do-what-it-says"(reads a command from a txt file). The user needs to tell liri what you want to do then add what they want to do after the command. 
 
