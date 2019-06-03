@@ -1,5 +1,5 @@
-<div class="container col-2">
-  <h1>burgers!</h1>
+<div id="header" class="container col-6">
+  <h1>Bob's Burgers!</h1>
 </div>
 <br>
 <img id="bobs-img" src="" alt="">
@@ -8,7 +8,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-xs-12">
-      <h2>Burgers you have not devoured!</h2>
+      <h2 class="h2">Burgers You Have Not Devoured!</h2>
       <div>
         {{#each burgers}}
         {{#unless devoured}}
@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="col-md-6 col-xs-12">
-      <h2>burgers you have been devoured!</h2>
+      <h2 id="h2">Burgers You Have Devoured!</h2>
       <ul>
         {{#each burgers}}
         {{#if devoured}}
@@ -30,18 +30,21 @@
   </div>
 </div>
 
+<br>
+<br>
+
 <div class="container">
   <div class="row">
     <div class="col-12">
       <div class="card">
-        <h5 class="card-header">Add your own Burger!</h5>
+        <h5 class="card-header">Add Your Own Burger!</h5>
           <div class="card-body">
             <form class="create-form">
               <div class="form-group">
                 <label for="burger">Burger Name:</label>
-                <input type="text" id="burger" name="name">
+                <input id="form" type="text" id="burger" name="name">
               </div>
-            <button class="btn btn-primary" type="submit">Add burger</button>
+            <button class="btn btn-info btn-lg btn-block" type="submit">Add Your Burger</button>
             </div>
           </form>
         </div>
@@ -57,7 +60,7 @@
   <div class="row">
     <div class="col-12">
       <div class="card">
-        <h5 class="card-header">Add your own Burger!</h5>
+        <h5 class="card-header">Add Some of Bobs Favorite Burgers!</h5>
           <div class="card-body">
             <form class="pre-sel" id="burger-form">
               {{!-- button for pretyped out burgers --}}
@@ -87,7 +90,7 @@
                 <label class="form-check-label" for="inlineRadio2">Mesclun Around Burger</label>
               </div>
               <br>
-              <button class="btn btn-primary" id="add-burger" type="submit">Add burger</button>
+              <button class="btn btn-info btn-lg btn-block" id="add-burger" type="submit">Add Your Burger</button>
             </form>
         </div>
       </div>

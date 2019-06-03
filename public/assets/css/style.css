@@ -1,17 +1,27 @@
 body{
-  background-color: rgb(133, 133, 133);
+  background-color: rgb(194, 194, 194);
   
+}
+#header{
+margin-left: 40%;
 }
 
 li {
   padding: 5px;
   margin: 5px;
-  background: #b4b4b4;
+  background: #dbdbdb;
   list-style-type: none;
 }
 
 .label {
   font-weight: bold;
+}
+
+.h2{
+  margin-left: 30px;
+}
+#h2{
+  margin-left: 45px;
 }
 
 .create-update-form {
@@ -27,5 +37,15 @@ li {
 ul{
   list-style-type: none;
 }
+
+.card-body{
+background-color: #dbdbdb;
+}
+
+#form{
+  width: 84%;
+}
+
+
 
 
