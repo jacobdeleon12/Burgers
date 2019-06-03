@@ -31,8 +31,8 @@ $(function() {
     };
     console.log(newburger);
     
-    if (newburger === '') {
-      alert("please enter a name")
+    if (newburger === ' '|| " "|| null) {
+      alert("Please Enter A Burger Name")
     }else{
  
     // Send the POST request.
