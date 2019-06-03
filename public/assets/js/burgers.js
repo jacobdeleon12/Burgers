@@ -31,7 +31,7 @@ $(function() {
     };
     console.log(newburger);
     
-    if (newburger === ' '|| " "|| null) {
+    if (newburger === " "|| null) {
       alert("Please Enter A Burger Name")
     }else{
  
